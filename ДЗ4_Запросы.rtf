@@ -1,0 +1,220 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red115\green158\blue202;\red170\green170\blue170;\red158\green158\blue158;
+\red193\green170\blue108;\red192\green192\blue192;\red238\green204\blue100;\red202\green197\blue128;}
+{\*\expandedcolortbl;;\csgenericrgb\c45098\c61961\c79216;\csgenericrgb\c66667\c66667\c66667;\csgenericrgb\c61961\c61961\c61961;
+\csgenericrgb\c75686\c66667\c42353;\csgenericrgb\c75294\c75294\c75294;\csgenericrgb\c93333\c80000\c39216;\csgenericrgb\c79216\c77255\c50196;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15380\viewh10680\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 CREATE
+\f1\b0 \cf3  
+\f0\b \cf2 TABLE
+\f1\b0 \cf3  \cf4 country\cf3  (\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	\cf4 country_id\cf3  \cf4 serial\cf3  
+\f0\b \cf2 primary
+\f1\b0 \cf3  
+\f0\b \cf2 key
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 country_name\cf3  
+\f0\b \cf5 VARCHAR 
+\f1\b0 \cf3 (\cf6 355\cf3 ) 
+\f0\b \cf2 unique
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 country_timezone\cf3  
+\f0\b \cf5 TIMESTAMP
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf3 ,\cf0 \
+\cf3 )\cf7 ;\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf3  
+\f0\b \cf2 INTO
+\f1\b0 \cf3  \cf4 country\cf3  (\cf4 country_name\cf3 , \cf4 country_timezone\cf3 ) 
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	(\cf8 'America'\cf3 , \cf8 '2021-01-01 05:00:00'\cf3 ),\cf0 \
+\cf3 	(\cf8 'France'\cf3 , \cf8 '2021-01-01 14:00:00'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Germany'\cf3 , \cf8 '2021-01-01 14:00:00'\cf3 ),\cf0 \
+\cf3 	(\cf8 'India'\cf3 , \cf8 '2021-01-01 17:30:00'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Latvia'\cf3 , \cf8 '2021-01-01 15:00:00'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Russia'\cf3 , \cf8 '2021-01-01 15:00:00'\cf3 )\cf7 ;\cf0 \
+\cf3 	\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 CREATE
+\f1\b0 \cf3  
+\f0\b \cf2 TABLE
+\f1\b0 \cf3  \cf4 languages\cf3  (\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	\cf4 languages_id\cf3  \cf4 serial\cf3  
+\f0\b \cf2 primary
+\f1\b0 \cf3  
+\f0\b \cf2 key
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 languages_name\cf3  
+\f0\b \cf5 VARCHAR 
+\f1\b0 \cf3 (\cf6 355\cf3 ) 
+\f0\b \cf2 unique
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 international\cf3  
+\f0\b \cf5 boolean
+\f1\b0 \cf3 ,\cf0 \
+\cf3 )\cf7 ;\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf3  
+\f0\b \cf2 INTO
+\f1\b0 \cf3  \cf4 languages\cf3  (\cf4 languages_name\cf3 , \cf4 international\cf3 ) 
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	(\cf8 'Russian'\cf3 , \cf8 'true'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Ukrainian'\cf3 , \cf8 'false'\cf3 ),\cf0 \
+\cf3 	(\cf8 'English'\cf3 , \cf8 'true'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Lettish'\cf3 , \cf8 'false'\cf3 ),\cf0 \
+\cf3 	(\cf8 'French'\cf3 , \cf8 'false'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Estonian'\cf3 , \cf8 'false'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Belarusian'\cf3 , \cf8 'false'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Germanic'\cf3 , \cf8 'true'\cf3 )\cf7 ;\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 CREATE
+\f1\b0 \cf3  
+\f0\b \cf2 TABLE
+\f1\b0 \cf3  \cf4 ethnic\cf3  (\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	\cf4 ethnic_id\cf3  \cf4 serial\cf3  
+\f0\b \cf2 primary
+\f1\b0 \cf3  
+\f0\b \cf2 key
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 etnic_name\cf3  
+\f0\b \cf5 VARCHAR 
+\f1\b0 \cf3 (\cf6 355\cf3 ) 
+\f0\b \cf2 unique
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 ethnic_description\cf3  
+\f0\b \cf5 text
+\f1\b0 \cf3 ,\cf0 \
+\cf3 )\cf7 ;\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf3  
+\f0\b \cf2 INTO
+\f1\b0 \cf3  \cf4 ethnic\cf3  (\cf4 ethnic_name\cf3 ,\cf4 ethnic_description\cf3 ) 
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	(\cf8 'Americans'\cf3 , \cf8 'Americans are the citizens and nationals of the United States of America.[47][48] Although citizens and nationals make up the majority of Americans, many dual citizens, expatriates, and permanent residents may also legally claim American nationality.[49][47][50][51] The United States is home to people of many ethnic origins. As a result, American culture and law does not equate nationality with race or ethnicity, but with bona fide citizenship and an oath of permanent allegiance.'\cf3 ),\cf0 \
+\cf3 	(\cf8 'French '\cf3 , \cf8 'The French people (French: Fran?ais) are an ethnic group primarily located in Western Europe and nation that shares a common French culture, history, the French language and is identified with the country of France.'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Russians'\cf3 , \cf8 'The Russians are an East Slavic ethnic group native to Eastern Europe, who share a common Russian ancestry, culture, and history. Russian, the most spoken Slavic language, is the shared mother tongue of the Russians; and Orthodox Christianity is their historical religion since the 11th century. They are the largest Slavic nation, as well as the largest European nation.'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Latvians'\cf3 , \cf8 'Latvians are a Baltic ethnic group and nation native to Latvia and the immediate geographical region, the Baltics. They are occasionally also referred to as Letts,[40][41] although this term is becoming obsolete. Latvians share a common Latvian language, culture and history.'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Estonians'\cf3 , \cf8 'Estonians are a Finnic ethnic group native to Estonia who speak the Estonian language and share a common culture and history.'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Germans'\cf3 , \cf8 'The Germans are a Germanic ethnic group native to Central Europe.[11][12][13] Speaking the German language is the most important characteristic of modern Germans,[13][14][15] but they are also characterized by a common German culture, descent and history.[14] The term "German" may also be applied to any citizen,[16] native or inhabitant of Germany,[17][18] regardless of whether they are of German ethnicity. Estimates on the total number of Germans in the world range from 100 to 150 million, and most of them live in Germany.'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Ukrainians'\cf3 , \cf8 'Ukrainians are an East Slavic ethnic group native to Ukraine, which is by total population the seventh-largest[47] nation in Europe and the second-largest among the East Slavs after the Russians. The Constitution of Ukraine applies the term ''Ukrainians'' to all its citizens.'\cf3 ),\cf0 \
+\cf3 	(\cf8 'Belarusians'\cf3 , \cf8 'Belarusians are an East Slavic ethnic group who are native to modern-day Belarus and the immediate region. There are over 9.5 million people who proclaim Belarusian ethnicity worldwide, with the majority residing either in Belarus or the adjacent countries where they are an autochthonous minority.'\cf3 )\cf7 ;\cf0 \
+\cf3 	\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 CREATE
+\f1\b0 \cf3  
+\f0\b \cf2 TABLE
+\f1\b0 \cf3  \cf4 ethnic_languages\cf3  (\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	\cf4 ethnic_id\cf3  
+\f0\b \cf5 INTEGER
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 languages_id\cf3  
+\f0\b \cf5 INTEGER
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf0 \
+\cf3 )\cf7 ;\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf3  
+\f0\b \cf2 INTO
+\f1\b0 \cf3  \cf4 ethnic_languages\cf3  (\cf4 ethnic_id\cf3 , \cf4 languages_id\cf3 ) 
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	(\cf6 1\cf3 , \cf6 4\cf3 ),\cf0 \
+\cf3 	(\cf6 3\cf3 , \cf6 1\cf3 ),\cf0 \
+\cf3 	(\cf6 3\cf3 , \cf6 4\cf3 ),\cf0 \
+\cf3 	(\cf6 4\cf3 , \cf6 5\cf3 ),\cf0 \
+\cf3 	(\cf6 4\cf3 , \cf6 4\cf3 ),\cf0 \
+\cf3 	(\cf6 4\cf3 , \cf6 1\cf3 )\cf7 ;\cf0 \
+\cf3 	\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 CREATE
+\f1\b0 \cf3  
+\f0\b \cf2 TABLE
+\f1\b0 \cf3  \cf4 country_ethnic\cf3  (\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	\cf4 country_id\cf3  
+\f0\b \cf5 INTEGER
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf3 ,\cf0 \
+\cf3 	\cf4 ethnic_id\cf3  
+\f0\b \cf5 INTEGER
+\f1\b0 \cf3  
+\f0\b \cf2 not
+\f1\b0 \cf3  
+\f0\b \cf2 null
+\f1\b0 \cf0 \
+\cf3 )\cf7 ;\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 INSERT
+\f1\b0 \cf3  
+\f0\b \cf2 INTO
+\f1\b0 \cf3  \cf4 country_ethnic\cf3  (\cf4 country_id\cf3 , \cf4 ethnic_id\cf3 ) 
+\f0\b \cf2 VALUES
+\f1\b0 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 	(\cf6 1\cf3 , \cf6 2\cf3 ),\cf0 \
+\cf3 	(\cf6 1\cf3 , \cf6 2\cf3 ),\cf0 \
+\cf3 	(\cf6 1\cf3 , \cf6 2\cf3 ),\cf0 \
+\cf3 	(\cf6 1\cf3 , \cf6 2\cf3 ),\cf0 \
+\cf3 	(\cf6 6\cf3 , \cf6 4\cf3 ),\cf0 \
+\cf3 	(\cf6 6\cf3 , \cf6 4\cf3 ),\cf0 \
+\cf3 	(\cf6 6\cf3 , \cf6 4\cf3 )\cf7 ;}
